@@ -20,7 +20,8 @@ This Home Assistant add-on lets you control a Teison EV charger via the Teison c
 
 2. Install `Teison EV Charger` from the add-on store.
 3. Configure your login credentials and MQTT settings.
-4. Start the add-on.
+4. Set access_token : Token - in your hass account click on your profile → security tab → Long-lived access tokens → create token → copy it to the add on config.
+5. Start the add-on.
 
 ## Configuration
 
