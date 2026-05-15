@@ -9,6 +9,16 @@ This Home Assistant add-on lets you control a Teison EV charger via the Teison c
 - MQTT auto-discovery for UI integration
 - REST API for scripting and automation
 
+## Prerequisites
+
+The add-on requires a reachable MQTT broker. Before installing:
+
+1. Install the **Mosquitto broker** add-on from the official add-on store and start it.
+2. Create a Home Assistant user for MQTT: Settings → People → Users → Add user. Note the username and password — you'll need them in the add-on config.
+3. Add the **MQTT** integration: Settings → Devices & Services → Add Integration → MQTT. Use the user from step 2.
+
+Without these, the add-on will fail to start.
+
 ## Installation
 
 [![Open your Home Assistant instance and show the add add-on repository dialog with a specific repository URL pre-filled.](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https://github.com/ljgoe/teison-ev-addon-repo)
