@@ -12,6 +12,15 @@ from Crypto.PublicKey import RSA
 from Crypto.Cipher import PKCS1_v1_5
 from requests.exceptions import RequestException, SSLError
 
+import builtins
+from datetime import datetime
+
+_orig_print = builtins.print
+def print(*args, **kwargs):
+    ts = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+    kwargs.setdefault('flush', True)
+    _orig_print(f"[{ts}]", *args, **kwargs)
+builtins.print = print
 
 # Public key for password encryption
 public_key_pem = """-----BEGIN PUBLIC KEY-----
